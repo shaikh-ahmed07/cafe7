@@ -1,60 +1,188 @@
 <style>
     body{
-        background-image: url(images/menu\ backg.png);
-        text-align: center;
+        background-image:  url(images/menu\ backg.png);
+        background-size: cover;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-transform: capitalize;
+    
     }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 120px;
+        
+            }
+    
+    
+            .pic {
+                height: 150px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 200px;
+                transition: all 0.3s ease-in-out;
+            }
+    
+            .pic:hover {
+                height: 180px;
+                width: 230px;
+            }
+    
+            .text {
+                /* text-align: center; */
+                margin: 10px 0;
+                padding: 0;
+                text-shadow: 0 0 10px black;
+            }
+    
+            a {
+                text-decoration: none;
+                color: black;
+            }
+    
+            h1 {
+          
+                text-align: center;
+                font-size: x-large;
+                
+              
+            }
+            .head{
+                font-size: 40px;
+                background-color: white;
+                font-style: italic;
+                border: solid 2px;
+                margin-bottom: 100px;
+                
+          
+            }
+            .ck-piz{
+                
+                height: 20px;
+                width: 100%;
+            }
+            .cpiz{
+                font-size: 40px;
+                background-color: white;
+                font-style: italic;
+                border: solid 2px;
+                margin-bottom: 0px;
+            }
+           
+        
+    
+            @media(max-width:600px){
+                .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+        
+            }
+            
+                .pic {
+                height: 100px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 150px;
+                transition: all 0.3s ease-in-out;
+                gap: 50px;
+               
+            }
+            .pic:hover {
+                height: 120px;
+                width: 180px;
+            }
+            .text {
+                text-align: center;
+                margin: 5px 0;
+                padding: 0;
+                text-shadow: 0 0 5px rgb(76, 160, 175);
+            }
+            h1 {
+          
+          text-align: center;
+          font-size: medium;
+        
+      }
+      .head{
+                font-size: 2em;
+                background-color:white;
+                font-style: italic;
+                border: solid  black;
+                margin-bottom: 100px;
+                color: green;
+          
+            }
+            .cpiz{
+                font-size: 2em;
+                background-color:white;
+                font-style: italic;
+                border: solid  black;
+                margin-bottom: 0px;
+                color:crimson;  
+            }
+           
+            }
+    </style>
+    
+    <div class="main">
+        <h1 class="head"> veg Pizza  </h1>
+        <div class="container">
+         <div class="veg cheese"> <a href="#"><img class="pic" src="images/veg cheese.jfif" alt="veg cheese "><h1 class="text">veg cheese:   <br> <span style="color: red; text-shadow: none;" >180rs </span></h1></a>
+          </div>
+    
+          <div class="veg cheese burst "> <a href="#"><img class="pic" src="images/veg cheese burst.jfif" alt="veg cheese burst "><h1 class="text">veg cheese burst :  <br>  <span style="color: red; text-shadow: none;" >200rs </span></h1></a>
+          </div>
+    
+          <div class="veg mexican cheese"> <a href="#"><img class="pic" src="images/veg mexican cheese.jfif" alt="veg mexican cheese"><h1 class="text">veg mexican cheese :  <br> <span style="color: red; text-shadow: none;" >200rs </span></h1></a>
+          </div>
 
-    h1{
-        font-size: 4rem;
-    }
-    .piz{
-        font-size: 30px;
-    }
-    .piz:hover{
-        font-size: 35px;
-        transition-timing-function: ease-in;
-        transition-duration: 0.2s;
-   
-    }
-    .chicken{
-        font-size: 30px;
-    }
-    .chicken:hover{
-        font-size: 35px;
-        transition-timing-function: ease-in;
-        transition-duration: 0.2s;
-   
-    }
-    li{
-        list-style: none;
-    }
-</style>
+          <div class="veg mexican cheese burst"> <a href="#"><img class="pic" src="images/veg mexican cheese burst.jfif" alt="veg mexican cheese burst"><h1 class="text">veg mexican cheese burst:  <br> <span style="color: red; text-shadow: none;" >220rs</span></h1></a>
+          </div>
+    
+          <div class="paneer cheese"> <a href="#"><img class="pic" src="images/paneer cheese.jfif" alt="paneer cheese"><h1 class="text">paneer cheese : <br>  <span style="color: red; text-shadow: none;" >180rs </span></h1></a>
+          </div>
+          
+          <div class="corn cheese"> <a href="#"><img class="pic" src="images/corn cheeese.jfif" alt="corn cheeese"><h1 class="text">corn cheeese : <br>   <span style="color: red; text-shadow: none;" >180rs </span></h1></a>
+          </div>
+    
+          <div class="corn cheese burst"> <a href="#"><img class="pic" src="images/corn cheese burst.jfif" alt="corn cheese burst"><h1 class="text">corn cheese burst : <br>  <span style="color: red; text-shadow: none;" >200rs </span></h1></a>
+          </div>
+    
+          <div class="magherita"> <a href="#"><img class="pic" src="images/magherita.jfif" alt="magherita"><h1 class="text">magherita : <br>  <span style="color: red; text-shadow: none;" >200rs</span></h1></a>
+          </div>  
 
-<div class="veg pizza">
-    <h1>pizza</h1>
-    <ul class="piz">
-        <li style="color: green;"> veg cheese _____ <span style="color: red ; " >180rs</span></li><br>
-        <li> veg cheese burst ______<span style="color: red;">200rs</span></li><br>
-        <li> veg mexican cheese ______<span style="color: red;">200rs</span></li><br>
-        <li>veg mexican cheese burst __________<span style="color: red;">220rs</span></li><br>
-        <li>paneer cheese __________<span style="color: red;">180rs</span></li><br>
-        <li>corn cheeese __________<span style="color: red;">180rs</span></li><br>
-        <li>corn cheese burst ___________<span style="color: red;">200rs</span></li><br>
-        <li>magherita __________<span style="color: red;">200rs</span></li><br>
-    </ul>
-</div>
-<div class="chicken pizza">
-    <h1>chicken pizza</h1>
-    <ul class="chicken">
-        <li>chicken cheeese</li><br>
-        <li>chicken cheeese burst</li><br>
-        <li>chicken mexican cheese</li><br>
-        <li> chicken mexican cheese burst</li><br>
-        <li>chicken and paneer cheese</li><br>
-        <li> chicken and corn cheese</li><br>
-        <li>chicken and corn cheese burst</li><br>
-        <li>chicken and olive cheese</li><br>
-        <li>chicken and olive cheese burst</li><br>
-    </ul>
-</div>
+              <div class="ck-piz">
+                <h1 class="cpiz">chicken Pizza</h1>
+              </div>
+
+          <div class="chicken cheese"> <a href="#"><img class="pic" src="images/chicken cheeese.jfif" alt="chicken cheeese"><h1 class="text">chicken cheeese : <br>  <span style="color: red; text-shadow: none;" >180rs </span></h1></a>
+          </div>
+    
+          <div class="chicken cheese burst"> <a href="#"><img class="pic" src="images/chicken cheeese burst.jfif" alt="chicken cheeese burst"><h1 class="text">chicken cheeese<br> burst :  <span style="color: red; text-shadow: none;" >200rs </span></h1></a>
+          </div>
+    
+          <div class="chicken mexican cheese"> <a href="#"><img class="pic" src="images/chicken mexican cheese.jfif" alt="chicken mexican cheese"><h1 class="text">chicken mexican<br> cheese :  <span style="color: red; text-shadow: none;" >200rs </span></h1></a>
+          </div>
+
+          <div class="chicken mexican cheese burst"> <a href="#"><img class="pic" src="images/chicken mexican cheese burst.jfif" alt="chicken mexican cheese burst"><h1 class="text">chicken mexican cheese<br> burst  : <span style="color: red; text-shadow: none;" >220rs </span></h1></a>
+          </div>
+
+          <div class="chicken and paneer cheese"> <a href="#"><img class="pic" src="images/chicken and paneer cheese.jfif" alt="chicken and paneer cheese"><h1 class="text">chicken and paneer <br>cheese : <span style="color: red; text-shadow: none;" >200rs </span></h1></a>
+          </div>
+
+          <div class=" chicken and corn cheese"> <a href="#"><img class="pic" src="images/chicken and corn cheese.jfif" alt=" chicken and corn cheese"><h1 class="text"> chicken and corn<br> cheese :  <span style="color: red; text-shadow: none;" >200rs </span></h1></a>
+          </div>
+
+          <div class="chicken and corn cheese burst"> <a href="#"><img class="pic" src="images/chicken and corn cheese burst.jfif" alt="chicken and corn cheese burst"><h1 class="text">chicken and corn cheese <br>burst :   <span style="color: red; text-shadow: none;" >220rs </span></h1></a>
+          </div>
+
+          <div class="chicken and olive cheese"> <a href="#"><img class="pic" src="images/chicken and olive cheese.jfif" alt="chicken and olive cheese"><h1 class="text">chicken and olive <br>cheese : <span style="color: red; text-shadow: none;" >220rs </span></h1></a>
+          </div>
+          
+          <div class="chicken and olive cheese burst"> <a href="#"><img class="pic" src="images/chicken and olive cheese burst.jfif" alt="chicken mexican cheese"><h1 class="text">chicken and olive cheese <br>burst:  <span style="color: red; text-shadow: none;" >240rs </span></h1></a>
+          </div>
+
+    </div>
+    </div>
