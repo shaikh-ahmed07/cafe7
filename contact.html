@@ -1,9 +1,18 @@
 <style>
-    img{
+    img {
         border: solid black;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 100%; /* Default setting for larger screens */
+        max-width: 1335px; /* Ensures the image doesn't get too large */
+        height: auto; /* Maintain aspect ratio */
+    }
 
+    /* Media query for screens 600px or less (typical mobile view) */
+    @media only screen and (max-width: 600px) {
+        img {
+            width: 100%; /* Makes the image responsive */
+        }
     }
 </style>
 
-<img src="images/contact us.png" width="1335px" alt="">
+<img src="images/contact us.png" alt="Contact Us">

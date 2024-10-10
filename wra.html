@@ -1,31 +1,128 @@
 <style>
     body{
-        background-image: url(images/menu\ backg.png);
-        text-align: center;
+        background-image:  url(images/menu\ backg.png);
+        background-size: cover;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-transform: capitalize;
-    }
-    h1{
-        font-size: 4rem;
-    }
-    .wrap{
-        font-size: 30px;
-    }
-    .wrap:hover{
-        font-size: 35px;
-        transition-timing-function: ease-in;
-        transition-duration: 0.2s;
-   
-    }
     
-</style>
-<div class="wraps">
-    <h1>wraps</h1>
-    <ul class="wrap">
-        <li>paneer wrap__________<span style="color: red;">120rs</span></li><br>
-        <li>paneer cheese wrap__________<span style="color: red;">140rs</span></li><br>
-        <li> egg wrap__________<span style="color: red;">100rs</span></li><br>
-        <li>egg cheese wrap__________<span style="color: red;">120rs</span></li><br>
-        <li>chicken wrap__________<span style="color: red;">120rs</span></li><br>
-        <li>chicken cheese wrap__________<span style="color: red;">140rs</span></li><br>
-    </ul>
-</div>
+    }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 120px;
+        
+            }
+    
+    
+            .pic {
+                height: 150px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 200px;
+                transition: all 0.3s ease-in-out;
+            }
+    
+            .pic:hover {
+                height: 180px;
+                width: 230px;
+            }
+    
+            .text {
+                /* text-align: center; */
+                margin: 10px 0;
+                padding: 0;
+                text-shadow: 0 0 10px black;
+            }
+    
+            a {
+                text-decoration: none;
+                color: black;
+            }
+    
+            h1 {
+          
+                text-align: center;
+                font-size: x-large;
+                
+              
+            }
+            .head{
+                font-size: 40px;
+                background-color: white;
+                font-style: italic;
+                border: solid 2px;
+                margin-bottom: 100px;
+                
+          
+            }
+    
+            @media(max-width:600px){
+                .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+        
+            }
+            
+                .pic {
+                height: 100px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 150px;
+                transition: all 0.3s ease-in-out;
+                gap: 50px;
+               
+            }
+            .pic:hover {
+                height: 120px;
+                width: 180px;
+            }
+            .text {
+                text-align: center;
+                margin: 5px 0;
+                padding: 0;
+                text-shadow: 0 0 5px rgb(76, 160, 175);
+            }
+            h1 {
+          
+          text-align: center;
+          font-size: medium;
+        
+      }
+      .head{
+                font-size: 2em;
+                background-color:white;
+                font-style: italic;
+                border: solid  black;
+                margin-bottom: 100px;
+                color: crimson;
+          
+            }
+            }
+    </style>
+    
+    <div class="main">
+        <h1 class="head">Wraps </h1>
+        <div class="container">
+         <div class="paneer wrap "> <a href="#"><img class="pic" src="images/paneer wrap.jfif" alt=" paneer wrap "><h1 class="text">paneer wrap : <br> <span style="color: red; text-shadow: none;" >120rs </span></h1></a>
+          </div>
+    
+          <div class="paneer cheese wrap "> <a href="#"><img class="pic" src="images/paneer cheese wrap.jfif" alt="paneer cheese wrap "><h1 class="text">paneer cheese <br> wrap : <br>  <span style="color: red; text-shadow: none;" >140rs </span></h1></a>
+          </div>
+    
+          <div class=" egg wrap"> <a href="#"><img class="pic" src="images/egg wrap.jfif" alt=" egg wrap"><h1 class="text"> egg wrap :  <br> <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
+          </div>
+    
+          <div class="egg cheese wrap"> <a href="#"><img class="pic" src="images/egg cheese wrap.jfif" alt="egg cheese wrap"><h1 class="text">egg cheese <br> wrap : <br> <span style="color: red; text-shadow: none;" >120rs </span></h1></a>
+          </div>
+    
+          <div class="chicken wrap"> <a href="#"><img class="pic" src="images/wrap.jpg" alt="chicken wrap"><h1 class="text">chicken wrap : <br> <span style="color: red; text-shadow: none;" >120rs</span></h1></a>
+          </div>
+    
+          <div class="chicken cheese wrap"> <a href="#"><img class="pic" src="images/chciken cheese wrap.jfif" alt="chicken cheese wrap"><h1 class="text">chicken cheese<br> wrap : <br>  <span style="color: red; text-shadow: none;" >140rs </span></h1></a>
+          </div>
+          
+    </div>
+    </div>

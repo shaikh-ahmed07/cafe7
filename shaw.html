@@ -1,28 +1,122 @@
 <style>
     body{
-        background-image: url(images/menu\ backg.png);
-        text-align: center;
+        background-image:  url(images/menu\ backg.png);
+        background-size: cover;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-transform: capitalize;
-    }
-    h1{
-        font-size: 4rem;
-    }
-    .shaw{
-        font-size: 30px;
-    }
-    .shaw:hover{
-        font-size: 35px;
-        transition-timing-function: ease-in;
-        transition-duration: 0.2s;
-   
-    }
     
-</style>
-<div class="shawarma">
-    <h1>shawarma</h1>
-    <ul class="shaw">
-      <li>chicken shawarma__________<span style="color: red;">120rs</li><br>
-      <li>special shwarma__________<span style="color: red;">140rs</li><br>
-      <li>specail spicy cheese shwarma__________<span style="color: red;">140rs</li><br>
-    </ul>
-</div>
+    }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 120px;
+        
+            }
+    
+    
+            .pic {
+                height: 150px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 200px;
+                transition: all 0.3s ease-in-out;
+            }
+    
+            .pic:hover {
+                height: 180px;
+                width: 230px;
+            }
+    
+            .text {
+                /* text-align: center; */
+                margin: 10px 0;
+                padding: 0;
+                text-shadow: 0 0 10px black;
+            }
+    
+            a {
+                text-decoration: none;
+                color: black;
+            }
+    
+            h1 {
+          
+                text-align: center;
+                font-size: x-large;
+                
+              
+            }
+            .head{
+                font-size: 40px;
+                background-color: white;
+                font-style: italic;
+                border: solid 2px;
+                margin-bottom: 100px;
+                
+          
+            }
+    
+            @media(max-width:600px){
+                .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+        
+            }
+            
+                .pic {
+                height: 100px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 150px;
+                transition: all 0.3s ease-in-out;
+                gap: 50px;
+               
+            }
+            .pic:hover {
+                height: 120px;
+                width: 180px;
+            }
+            .text {
+                text-align: center;
+                margin: 5px 0;
+                padding: 0;
+                text-shadow: 0 0 5px rgb(76, 160, 175);
+            }
+            h1 {
+          
+          text-align: center;
+          font-size: medium;
+        
+      }
+      .head{
+                font-size: 2em;
+                background-color:white;
+                font-style: italic;
+                border: solid  black;
+                margin-bottom: 100px;
+                color: crimson;
+          
+            }
+            }
+    </style>
+    
+    <div class="main">
+        <h1 class="head">shawarma </h1>
+        <div class="container">
+         <div class="chicken shawarma "> <a href="#"><img class="pic" src="images/shawarma.jfif" alt=" chicken shawarma "><h1 class="text">chicken shawarma: <br> <span style="color: red; text-shadow: none;" >120rs </span></h1></a>
+          </div>
+    
+          <div class="special shwarma "> <a href="#"><img class="pic" src="images/special shawarma.jfif" alt="special shwarma "><h1 class="text">special shawarma : <br>  <span style="color: red; text-shadow: none;" >140rs </span></h1></a>
+          </div>
+    
+          <div class=" specail spicy cheese shwarma"> <a href="#"><img class="pic" src="images/chicken  cheese shawarma.jfif" alt="specail spicy cheese shwarma"><h1 class="text">special spicy <br> cheese shawarma :  <br> <span style="color: red; text-shadow: none;" >150rs </span></h1></a>
+          </div>
+    
+          <div class="Dry friut shawarma"> <a href="#"><img class="pic" src="images/dry fruits shawarma.jfif" alt="Dry friut shawarma"><h1 class="text">Dry friut shawarma : <br> <span style="color: red; text-shadow: none;" >150rs </span></h1></a>
+          </div>
+
+    </div>
+    </div>
