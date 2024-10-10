@@ -82,10 +82,11 @@ margin-right: 250px;
     }
     .navbar-nav {
     gap: 20px;
-      margin-left: 150px;
+      margin-left: 0px;
+      
     }
     .d-flex{
-    margin-right: 300px;
+    margin-right: 250px;
     } 
 }
 
