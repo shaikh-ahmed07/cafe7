@@ -48,9 +48,9 @@ gap: 20px;
 margin-right: 250px;
 }
 
-@media (max-width:600px){
+@media (max-width:600px) and (min-width:1200px){
     .background-img{
-        width: 400px;
+        width: 100%;
     }
     .album{
         width: 400px;
