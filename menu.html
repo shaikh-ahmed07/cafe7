@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café 7 Menu</title>
+    <style>
+        body {
+            background-image: url("images/menu\ backg.png");
+            background-blend-mode: darken;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            width: auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 90vh;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .menu-item {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .pic {
+            height: 150px;
+            border: solid 2px;
+            border-radius: 5%;
+            width: 200px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .pic:hover {
+            height: 250px;
+            width: 300px;
+        }
+
+        .text {
+            text-align: center;
+            margin: 10px 0;
+            padding: 0;
+            text-shadow: 0 0 10px black;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        /* Media Query for Mobile Devices (max-width: 600px) */
+        @media screen and (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .menu-item {
+                margin: 10px;
+            }
+
+            .pic {
+                height: 100px;
+                width: 150px;
+            }
+
+            .pic:hover {
+                height: 150px;
+                width: 200px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+        }
+
+        /* Media Query for Laptop Screens (width: 600px to 1200px) */
+        @media screen and (min-width: 600px) and (max-width: 1200px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px;
+            }
+
+            .menu-item {
+                margin: 15px;
+            }
+
+            .pic {
+                height: 120px;
+                width: 180px;
+            }
+
+            .pic:hover {
+                height: 180px;
+                width: 250px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="menu-item"> 
+                <a href="bur.html">
+                    <img class="pic" src="images/burger.jpg" alt="burger">
+                    <h1 class="text">Burgers</h1>
+                </a>
+            </div>
+
+            <div class="menu-item"> 
+                <a href="piz.html">
+                    <img class="pic" src="images/pizza.jfif" alt="pizza">
+                    <h1 class="text">Pizza</h1>
+                </a>
+            </div>
+
+            <div class="menu-item"> 
+                <a href="wra.html">
+                    <img class="pic" src="images/wrap.jpg" alt="wraps">
+                    <h1 class="text">Wraps</h1>
+                </a>
+            </div>
+
+            <div class="menu-item"> 
+                <a href="shaw.html">
+                    <img class="pic" src="images/shawarma.jfif" alt="shawarma">
+                    <h1 class="text">Shawarma</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
