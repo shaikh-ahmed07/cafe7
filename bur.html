@@ -1,38 +1,131 @@
 <style>
     body{
-        background-image: url(images/menu\ backg.png);
-        text-align: center;
+        background-image:  url(images/menu\ backg.png);
+        background-size: cover;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-transform: capitalize;
-      
+    
     }
-    h1{
-        font-size: 4rem;
-    }
-    .bur{
-        font-size: 30px;
-        list-style-type:none;
-    }
-    .bur:hover{
-        font-size: 35px;
-        transition-timing-function: ease-in;
-        transition-duration: 0.2s;
-        list-style-type:none
-   
-    }
-</style>
-
-
-
-
-<div class="burgers">
-    <h1>burgers</h1>
-    <ul class="bur">
-    <li> chicken burger__________<span style="color: red;">80rs</span></li><br>
-    <li> chicken cheese burger __________<span style="color: red;">100rs</span></li><br>
-    <li> kfc zinger burger __________ <span style="color: red;">100rs</span></li><br>
-    <li> Grilled chicken burger __________<span style="color: red;">100rs</span></li><br>
-    <li> Grilled chicken  cheese burger __________ <span style="color: red;">120rs</span></li><br>
-    <li> veg burger __________<span style="color: red;">80rs</span></li><br>
-    <li> veg cheese burger __________<span style="color: red;">100rs</span></li><br>
-    </ul>
-</div>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 120px;
+        
+            }
+    
+    
+            .pic {
+                height: 150px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 200px;
+                transition: all 0.3s ease-in-out;
+            }
+    
+            .pic:hover {
+                height: 180px;
+                width: 230px;
+            }
+    
+            .text {
+                /* text-align: center; */
+                margin: 10px 0;
+                padding: 0;
+                text-shadow: 0 0 10px black;
+            }
+    
+            a {
+                text-decoration: none;
+                color: black;
+            }
+    
+            h1 {
+          
+                text-align: center;
+                font-size: x-large;
+                
+              
+            }
+            .head{
+                font-size: 40px;
+                background-color: white;
+                font-style: italic;
+                border: solid 2px;
+                margin-bottom: 100px;
+                
+          
+            }
+    
+            @media(max-width:600px){
+                .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+        
+            }
+            
+                .pic {
+                height: 100px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 150px;
+                transition: all 0.3s ease-in-out;
+                gap: 50px;
+               
+            }
+            .pic:hover {
+                height: 120px;
+                width: 180px;
+            }
+            .text {
+                text-align: center;
+                margin: 5px 0;
+                padding: 0;
+                text-shadow: 0 0 5px rgb(76, 160, 175);
+            }
+            h1 {
+          
+          text-align: center;
+          font-size: medium;
+        
+      }
+      .head{
+                font-size: 2em;
+                background-color:white;
+                font-style: italic;
+                border: solid  black;
+                margin-bottom: 100px;
+                color: crimson;
+          
+            }
+            }
+    </style>
+    
+    <div class="main">
+        <h1 class="head">burgers </h1>
+        <div class="container">
+         <div class="chicken burger "> <a href="#"><img class="pic" src="images/burger.jpg" alt=" chicken burger "><h1 class="text">chicken burger  <br> <span style="color: red; text-shadow: none;" >80rs </span></h1></a>
+          </div>
+    
+          <div class="chicken cheese burger "> <a href="#"><img class="pic" src="images/cheese  chick burger.jfif" alt="chicken cheese burger "><h1 class="text">chicken cheese<br> burger  <br>  <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
+          </div>
+    
+          <div class="kfc zinger burger"> <a href="#"><img class="pic" src="images/kfc zinger burger.jfif" alt="kfc zinger burger"><h1 class="text">kfc zinger <br>burger  <br> <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
+          </div>
+    
+          <div class="Grilled chicken burger"> <a href="#"><img class="pic" src="images/Grilled chicken burger.jfif" alt="Grilled chicken burger"><h1 class="text">Grilled chicken <br>burger <br> <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
+          </div>
+    
+          <div class="Grilled chicken  cheese burger"> <a href="#"><img class="pic" src="images/Grilled chicken  cheese burger.jfif" alt="Grilled chicken  cheese burger"><h1 class="text">Grilled chicken  <br>cheese burger <br> <span style="color: red; text-shadow: none;" >120rs</span></h1></a>
+          </div>
+    
+          <div class="veg burger"> <a href="#"><img class="pic" src="images/veg burger.jfif" alt="veg burger"><h1 class="text">veg burger <br>  <span style="color: red; text-shadow: none;" >80rs </span></h1></a>
+          </div>
+          
+          <div class="veg cheese burger"> <a href="#"><img class="pic" src="images/veg cheese burger.jfif" alt="veg cheese burger"><h1 class="text">veg cheese<br> burger<br>   <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
+          </div>
+    
+    </div>
+    </div>
