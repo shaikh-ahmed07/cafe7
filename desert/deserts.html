@@ -1,144 +1,136 @@
 <style>
-body{
-    background-image:  url(./menu\ backg.png);
-    background-size: cover;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-transform: capitalize;
-
-}
-.container{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 100px;
-}
-        .menu-item {
-            margin: 20px;
-            text-align: center;
-        }
-
-        .pic {
-            height: 150px;
-            border: solid 2px;
-            border-radius: 5%;
-            width: 200px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .pic:hover {
-            height: 230px;
-            width: 280px;
-        }
-
-        .text {
-            text-align: start;
-            margin-top: 10px;
-            padding: 0;
-            text-shadow: 0 0 10px black;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        h1 {
-            font-size: 24px;
-            text-align: center;
-            font-size: xx-large;
+    body{
+        background-image:  url(./menu\ backg.png);
+        background-size: cover;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-transform: capitalize;
+    
+    }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 120px;
+            margin-bottom: 150px;
+            margin: 100px;
+        
+            }
+    
+    
+            .pic {
+                height: 150px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 200px;
+                transition: all 0.3s ease-in-out;
+            }
+    
+            .pic:hover {
+                height: 180px;
+                width: 230px;
+            }
+    
+            .text {
+                /* text-align: center; */
+                margin: 10px 0;
+                padding: 0;
+                text-shadow: 0 0 10px black;
+            }
+    
+            a {
+                text-decoration: none;
+                color: black;
+            }
+    
+            h1 {
+          
+                text-align: center;
+                font-size: x-large;
+                
+              
+            }
+            .head{
+                font-size: 40px;
+                background-color: white;
+                font-style: italic;
+                border: solid 2px;
+                margin-bottom: 100px;
+                
+          
+            }
+    
+            @media(max-width:600px){
+                .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 150px;
+           
+        
+            }
             
-        }
-        .des{
-            background-color:crimson;
-            border: solid 2px;
-            margin-bottom: 100px;
-            font-size: 40px;
-            font-weight: bold;
-            font-style: italic;
-
-        }
-@media(max-width:600px){
-    .container{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-}
-        .menu-item {
-            margin: 10px;
-            text-align: center;
-        }
-
-        .pic {
-            height: 100px;
-            border: solid 2px;
-            border-radius: 5%;
-            width: 150px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .pic:hover {
-            height: 150px;
-            width: 180px;
-        }
-
-        .text {
-            text-align: start;
-            margin-top: 5px;
-            padding: 0;
-            text-shadow: 0 0 10px black;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        h1 {
-            font-size: 15px;
-            text-align: center;
-            font-size: medium;
-            
-        }
-        .des{
-            background-color:crimson;
-            border: solid 2px;
-            margin-bottom: 50px;
-            font-size: 20px;
-            font-weight: bold;
-            font-style: italic;
-
-        }
-}
-</style>
-
-
-<div class="main">
-    <h1 class="des">Deserts and sweets</h1>
-    <div class="container">
-     <div class="Shehdood cream"> <a href="#"><img class="pic" src="./Shehdood cream.jpg" alt="Shehdood cream"><h1 class="text">Shehdood cream : <span style="color: red; text-shadow: none;" >120rs </span></h1></a>
-      </div>
-
-      <div class="sitafal cream"> <a href="#"><img class="pic" src="./sitafal cream.jpg" alt="sitafal cream"><h1 class="text">sitafal cream :  <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
-      </div>
-
-      <div class="mango cream"> <a href="#"><img class="pic" src="./mango cream.jpg" alt="mango cream"><h1 class="text">mango cream  : <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
-      </div>
-
-      <div class="khajoor cream"> <a href="#"><img class="pic" src="./khajoor cream.jpg" alt="khajoor cream"><h1 class="text">khajoor cream: <span style="color: red; text-shadow: none;" >120rs </span></h1></a>
-      </div>
-
-      <div class="cream kunafa"> <a href="#"><img class="pic" src="./cream kunafa.jpg" alt="cream kunafa"><h1 class="text">cream kunafa :  <span style="color: red; text-shadow: none;" >250rs </span></h1></a>
-      </div>
-
-      <div class="cream cheese kunafa"> <a href="#"><img class="pic" src="./cream cheese kunafa.webp" alt="cream cheese kunafa"><h1 class="text">cream cheese <br> kunafa : <span style="color: red; text-shadow: none;" >260rs </span></h1></a>
-      </div>
-      
-      <div class="nutella kunafa"> <a href="#"><img class="pic" src="./nutella kunafa.jfif" alt="nutella kunafa"><h1 class="text">nutella kunafa :  <span style="color: red; text-shadow: none;" >270rs </span></h1></a>
-      </div>
-
-      <div class="butterscotch kunafa"> <a href="#"><img class="pic" src="./butterscotch kunafa.jfif" alt="butterscotch kunafa"><h1 class="text">butterscotch kunafa : <span style="color: red; text-shadow: none;" >270rs </span></h1></a>
-      </div>
-
-</div>
-</div>
+                .pic {
+                height: 100px;
+                border: solid 2px;
+                border-radius: 5%;
+                width: 150px;
+                transition: all 0.3s ease-in-out;
+                gap: 50px;
+               
+            }
+            .pic:hover {
+                height: 120px;
+                width: 180px;
+            }
+            .text {
+                text-align: center;
+                margin: 5px 0;
+                padding: 0;
+                text-shadow: 0 0 5px rgb(76, 160, 175);
+            }
+            h1 {
+          
+          text-align: center;
+          font-size: medium;
+        
+      }
+      .head{
+                font-size: 2em;
+                background-color:white;
+                font-style: italic;
+                border: solid  black;
+                margin-bottom: 100px;
+                color: violet;
+          
+            }
+            }
+    </style>
+    
+    <div class="main">
+        <h1 class="head">Deserts and sweets</h1>
+        <div class="container">
+         <div class="Shehdood cream"> <a href="#"><img class="pic" src="./Shehdood cream.jpg" alt="Shehdood cream"><h1 class="text">Shehdood cream :<br> <span style="color: red; text-shadow: none;" >120rs </span></h1></a>
+          </div>
+    
+          <div class="sitafal cream"> <a href="#"><img class="pic" src="./sitafal cream.jpg" alt="sitafal cream"><h1 class="text">sitafal cream :<br>   <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
+          </div>
+    
+          <div class="mango cream"> <a href="#"><img class="pic" src="./mango cream.jpg" alt="mango cream"><h1 class="text">mango cream  : <br> <span style="color: red; text-shadow: none;" >100rs </span></h1></a>
+          </div>
+    
+          <div class="khajoor cream"> <a href="#"><img class="pic" src="./khajoor cream.jpg" alt="khajoor cream"><h1 class="text">khajoor cream:<br>  <span style="color: red; text-shadow: none;" >120rs </span></h1></a>
+          </div>
+    
+          <div class="cream kunafa"> <a href="#"><img class="pic" src="./cream kunafa.jpg" alt="cream kunafa"><h1 class="text">cream kunafa : <br>  <span style="color: red; text-shadow: none;" >250rs </span></h1></a>
+          </div>
+    
+          <div class="cream cheese kunafa"> <a href="#"><img class="pic" src="./cream cheese kunafa.webp" alt="cream cheese kunafa"><h1 class="text">cream cheese <br> kunafa : <br> <span style="color: red; text-shadow: none;" >260rs </span></h1></a>
+          </div>
+          
+          <div class="nutella kunafa"> <a href="#"><img class="pic" src="./nutella kunafa.jfif" alt="nutella kunafa"><h1 class="text">nutella kunafa :<br> <span style="color: red; text-shadow: none;" >270rs </span></h1></a>
+          </div>
+    
+          <div class="butterscotch kunafa"> <a href="#"><img class="pic" src="./butterscotch kunafa.jfif" alt="butterscotch kunafa"><h1 class="text">butterscotch <br> kunafa :<br> <span style="color: red; text-shadow: none;" >270rs </span></h1></a>
+          </div>
+    
+    </div>
