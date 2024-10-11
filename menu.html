@@ -11,6 +11,14 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
+        .head{
+            text-align: center;
+            background-color: whitesmoke;
+            border: solid black  2px;
+            font-size: xx-large;
+            text-transform: capitalize;
+            color: firebrick;
+        }
 
         .main {
             width: auto;
@@ -62,7 +70,7 @@
         /* Media Query for Mobile Devices (max-width: 600px) */
         @media screen and (max-width: 600px) {
             .container {
-                flex-direction: column;
+               gap: 50px;
                 height: auto;
                 padding: 10px;
             }
@@ -115,6 +123,7 @@
     </style>
 </head>
 <body>
+    <h1 class="head">menu items</h1>
     <div class="main">
         <div class="container">
             <div class="menu-item"> 
@@ -155,7 +164,7 @@
             <div class="menu-item"> 
                 <a href="shakes.html">
                     <img class="pic" src="images/blackcurrent.jfif" alt="shakes">
-                    <h1 class="text">Shakes and Refreshments</h1>
+                    <h1 class="text">Shakes <br> and <br>Refreshments</h1>
                 </a>
             </div>
         </div>
