@@ -62,26 +62,81 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.quantity-btn:active{
+    background-color: #bb1616;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #F4EBD0;
+    font-size: 16px;
+    margin: 0 5px;
+}
 </style>
 <div class="main">
     <h1 class="head"> coff<span style="color: red ; font-size: 45px; " >EE</span> </h1>
     <div class="container">
-     <div class="cold coffee with crush "> <a href="#"><img class="pic" src="images/cold coffee with crush.avif" alt="cold coffee with crush "><h1 class="text">cold coffee crush : <br> <span style="color: red; text-shadow: none;" >50rs <button class="btn">Add</button> </span></h1></a>
+     <div class="cold coffee with crush "> <a href="#"><img class="pic" src="images/cold coffee with crush.avif" alt="cold coffee with crush "><h1 class="text">cold coffee crush : <br> <span style="color: red; text-shadow: none;" >50rs <button class="btn">Add</button> <div class="quantity">
+        <button class="quantity-btn decrement">-</button>
+        <input type="number" class="quantity-input" value="1" min="1" max="10">
+        <button class="quantity-btn increment">+</button>
+    </div>
+    </span></h1></a>
       </div>
 
-      <div class="chocolate coffee"> <a href="#"><img class="pic" src="images/chocolate coffee.jfif" alt="chocolate coffee"><h1 class="text">chocolate coffee :<br>  <span style="color: red; text-shadow: none;" >70rs <button class="btn">Add</button> </span></h1></a>
+      <div class="chocolate coffee"> <a href="#"><img class="pic" src="images/chocolate coffee.jfif" alt="chocolate coffee"><h1 class="text">chocolate coffee :<br>  <span style="color: red; text-shadow: none;" >70rs <button class="btn">Add</button><div class="quantity">
+        <button class="quantity-btn decrement">-</button>
+        <input type="number" class="quantity-input" value="1" min="1" max="10">
+        <button class="quantity-btn increment">+</button>
+    </div>
+    </span></h1></a>
       </div>
 
-      <div class="redbull coffee"> <a href="#"><img class="pic" src="images/redbull coffee.jpg" alt="redbull coffee"><h1 class="text">redbull coffee : <br> <span style="color: red; text-shadow: none;" >130rs <button class="btn">Add</button> </span></h1></a>
+      <div class="redbull coffee"> <a href="#"><img class="pic" src="images/redbull coffee.jpg" alt="redbull coffee"><h1 class="text">redbull coffee : <br> <span style="color: red; text-shadow: none;" >130rs <button class="btn">Add</button> <div class="quantity">
+        <button class="quantity-btn decrement">-</button>
+        <input type="number" class="quantity-input" value="1" min="1" max="10">
+        <button class="quantity-btn increment">+</button>
+    </div>
+    </span></h1></a>
       </div>
 
-      <div class="americano"> <a href="#"><img class="pic" src="images/americano.jfif"americano"><h1 class="text">americano : <br> <span style="color: red; text-shadow: none;" >50rs  <button class="btn">Add</button></span></h1></a>
+      <div class="americano"> <a href="#"><img class="pic" src="images/americano.jfif"americano"><h1 class="text">americano : <br> <span style="color: red; text-shadow: none;" >50rs  <button class="btn">Add</button> <div class="quantity">
+        <button class="quantity-btn decrement">-</button>
+        <input type="number" class="quantity-input" value="1" min="1" max="10">
+        <button class="quantity-btn increment">+</button>
+    </div>
+    </span></h1></a>
       </div>
 
-      <div class="latte"> <a href="#"><img class="pic" src="images/latte.jfif" alt="latte"><h1 class="text">latte : <br> <span style="color: red; text-shadow: none;" >80rs <button class="btn">Add</button></span></h1></a>
+      <div class="latte"> <a href="#"><img class="pic" src="images/latte.jfif" alt="latte"><h1 class="text">latte : <br> <span style="color: red; text-shadow: none;" >80rs <button class="btn">Add</button><div class="quantity">
+        <button class="quantity-btn decrement">-</button>
+        <input type="number" class="quantity-input" value="1" min="1" max="10">
+        <button class="quantity-btn increment">+</button>
+    </div>
+    </span></h1></a>
       </div>
 
-      <div class="Caffè mocha"> <a href="#"><img class="pic" src="images/Caffè mocha.jfif" alt="Caffè mocha latte"><h1 class="text">Caffè mocha : <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button></span></h1></a>
+      <div class="Caffè mocha"> <a href="#"><img class="pic" src="images/Caffè mocha.jfif" alt="Caffè mocha latte"><h1 class="text">Caffè mocha : <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button><div class="quantity">
+        <button class="quantity-btn decrement">-</button>
+        <input type="number" class="quantity-input" value="1" min="1" max="10">
+        <button class="quantity-btn increment">+</button>
+    </div>
+    </span></h1></a>
       </div>
     </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

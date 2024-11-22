@@ -108,21 +108,66 @@
           size: 10px;
            }
         
+   .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.quantity-btn:active{
+    background-color: #bb1616;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #F4EBD0;
+    font-size: 16px;
+    margin: 0 5px;
+}
     </style>
     
     <div class="main">
         <h1 class="head">shawarma </h1>
         <div class="container">
-         <div class="chicken shawarma "> <a href="#"><img class="pic" src="images/shawarma.jfif" alt=" chicken shawarma "><h1 class="text">chicken shawarma: <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button></span></h1></a>
+         <div class="chicken shawarma "> <a href="#"><img class="pic" src="images/shawarma.jfif" alt=" chicken shawarma "><h1 class="text">chicken shawarma: <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="special shwarma "> <a href="#"><img class="pic" src="images/special shawarma.jfif" alt="special shwarma "><h1 class="text">special shawarma : <br>  <span style="color: red; text-shadow: none;" >140rs <button class="btn">Add</button></span></h1></a>
+          <div class="special shwarma "> <a href="#"><img class="pic" src="images/special shawarma.jfif" alt="special shwarma "><h1 class="text">special shawarma : <br>  <span style="color: red; text-shadow: none;" >140rs <button class="btn">Add</button> <div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class=" specail spicy cheese shwarma"> <a href="#"><img class="pic" src="images/chicken  cheese shawarma.jfif" alt="specail spicy cheese shwarma"><h1 class="text">special spicy <br> cheese shawarma :  <br> <span style="color: red; text-shadow: none;" >150rs <button class="btn">Add</button></span></h1></a>
+          <div class=" specail spicy cheese shwarma"> <a href="#"><img class="pic" src="images/chicken  cheese shawarma.jfif" alt="specail spicy cheese shwarma"><h1 class="text">special spicy <br> cheese shawarma :  <br> <span style="color: red; text-shadow: none;" >150rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="Dry friut shawarma"> <a href="#"><img class="pic" src="images/dry fruits shawarma.jfif" alt="Dry friut shawarma"><h1 class="text">Dry friut shawarma : <br> <span style="color: red; text-shadow: none;" >150rs <button class="btn">Add</button></span></h1></a>
+          <div class="Dry friut shawarma"> <a href="#"><img class="pic" src="images/dry fruits shawarma.jfif" alt="Dry friut shawarma"><h1 class="text">Dry friut shawarma : <br> <span style="color: red; text-shadow: none;" >150rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
 
     </div>

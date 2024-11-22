@@ -61,6 +61,7 @@
     color: white;
     border-color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-size: 20px; */
 
 }
             @media(max-width:600px){
@@ -107,30 +108,94 @@
           
             }
             }
-    </style>
     
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.quantity-btn:active{
+    background-color: #bb1616;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #F4EBD0;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+</style>
+
+    </style>
+  
     <div class="main">
         <h1 class="head">burgers </h1>
         <div class="container">
-         <div class="chicken burger "> <a href="#"><img class="pic" src="images/burger.jpg" alt=" chicken burger "><h1 class="text">chicken burger  <br> <span style="color: red; text-shadow: none;" >80rs <button class="btn">Add</button> </span></h1></a>
+         <div class="chicken burger "> <a href="#"><img class="pic" src="images/burger.jpg" alt=" chicken burger "><h1 class="text">chicken burger  <br> <span style="color: red; text-shadow: none;" >80rs <button class="btn">Add</button> <div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="chicken cheese burger "> <a href="#"><img class="pic" src="images/cheese  chick burger.jfif" alt="chicken cheese burger "><h1 class="text">chicken cheese<br> burger  <br>  <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button> </span></h1></a>
+          <div class="chicken cheese burger "> <a href="#"><img class="pic" src="images/cheese  chick burger.jfif" alt="chicken cheese burger "><h1 class="text">chicken cheese<br> burger  <br>  <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button> <div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="kfc zinger burger"> <a href="#"><img class="pic" src="images/kfc zinger burger.jfif" alt="kfc zinger burger"><h1 class="text">kfc zinger <br>burger  <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button></span></h1></a>
+          <div class="kfc zinger burger"> <a href="#"><img class="pic" src="images/kfc zinger burger.jfif" alt="kfc zinger burger"><h1 class="text">kfc zinger <br>burger  <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button> <div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="Grilled chicken burger"> <a href="#"><img class="pic" src="images/Grilled chicken burger.jfif" alt="Grilled chicken burger"><h1 class="text">Grilled chicken <br>burger <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button></span></h1></a>
+          <div class="Grilled chicken burger"> <a href="#"><img class="pic" src="images/Grilled chicken burger.jfif" alt="Grilled chicken burger"><h1 class="text">Grilled chicken <br>burger <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="Grilled chicken  cheese burger"> <a href="#"><img class="pic" src="images/Grilled chicken  cheese burger.jfif" alt="Grilled chicken  cheese burger"><h1 class="text">Grilled chicken  <br>cheese burger <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button></span></h1></a>
+          <div class="Grilled chicken  cheese burger"> <a href="#"><img class="pic" src="images/Grilled chicken  cheese burger.jfif" alt="Grilled chicken  cheese burger"><h1 class="text">Grilled chicken  <br>cheese burger <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button> <div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="veg burger"> <a href="#"><img class="pic" src="images/veg burger.jfif" alt="veg burger"><h1 class="text">veg burger <br>  <span style="color: red; text-shadow: none;" >80rs <button class="btn">Add</button></span></h1></a>
+          <div class="veg burger"> <a href="#"><img class="pic" src="images/veg burger.jfif" alt="veg burger"><h1 class="text">veg burger <br>  <span style="color: red; text-shadow: none;" >80rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
           
-          <div class="veg cheese burger"> <a href="#"><img class="pic" src="images/veg cheese burger.jfif" alt="veg cheese burger"><h1 class="text">veg cheese<br> burger<br>   <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button></span></h1></a>
+          <div class="veg cheese burger"> <a href="#"><img class="pic" src="images/veg cheese burger.jfif" alt="veg cheese burger"><h1 class="text">veg cheese<br> burger<br>   <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
     </div>

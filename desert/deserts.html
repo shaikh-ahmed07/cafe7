@@ -111,33 +111,99 @@
         
            }
         
+               
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.quantity-btn:active{
+    background-color: #bb1616;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #F4EBD0;
+    font-size: 16px;
+    margin: 0 5px;
+}
     </style>
     
     <div class="main">
         <h1 class="head">Deserts and sweets</h1>
         <div class="container">
-         <div class="Shehdood cream"> <a href="#"><img class="pic" src="./Shehdood cream.jpg" alt="Shehdood cream"><h1 class="text">Shehdood cream :<br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button></span></h1></a>
+         <div class="Shehdood cream"> <a href="#"><img class="pic" src="./Shehdood cream.jpg" alt="Shehdood cream"><h1 class="text">Shehdood cream :<br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="sitafal cream"> <a href="#"><img class="pic" src="./sitafal cream.jpg" alt="sitafal cream"><h1 class="text">sitafal cream :<br>   <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button></span></h1></a>
+          <div class="sitafal cream"> <a href="#"><img class="pic" src="./sitafal cream.jpg" alt="sitafal cream"><h1 class="text">sitafal cream :<br>   <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="mango cream"> <a href="#"><img class="pic" src="./mango cream.jpg" alt="mango cream"><h1 class="text">mango cream  : <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button></span></h1></a>
+          <div class="mango cream"> <a href="#"><img class="pic" src="./mango cream.jpg" alt="mango cream"><h1 class="text">mango cream  : <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="khajoor cream"> <a href="#"><img class="pic" src="./khajoor cream.jpg" alt="khajoor cream"><h1 class="text">khajoor cream:<br>  <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button></span></h1></a>
+          <div class="khajoor cream"> <a href="#"><img class="pic" src="./khajoor cream.jpg" alt="khajoor cream"><h1 class="text">khajoor cream:<br>  <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="cream kunafa"> <a href="#"><img class="pic" src="./cream kunafa.jpg" alt="cream kunafa"><h1 class="text">cream kunafa : <br>  <span style="color: red; text-shadow: none;" >250rs <button class="btn">Add</button></span></h1></a>
+          <div class="cream kunafa"> <a href="#"><img class="pic" src="./cream kunafa.jpg" alt="cream kunafa"><h1 class="text">cream kunafa : <br>  <span style="color: red; text-shadow: none;" >250rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="cream cheese kunafa"> <a href="#"><img class="pic" src="./cream cheese kunafa.webp" alt="cream cheese kunafa"><h1 class="text">cream cheese <br> kunafa : <br> <span style="color: red; text-shadow: none;" >260rs <button class="btn">Add</button></span></h1></a>
+          <div class="cream cheese kunafa"> <a href="#"><img class="pic" src="./cream cheese kunafa.webp" alt="cream cheese kunafa"><h1 class="text">cream cheese <br> kunafa : <br> <span style="color: red; text-shadow: none;" >260rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
           
-          <div class="nutella kunafa"> <a href="#"><img class="pic" src="./nutella kunafa.jfif" alt="nutella kunafa"><h1 class="text">nutella kunafa :<br> <span style="color: red; text-shadow: none;" >270rs <button class="btn">Add</button></span></h1></a>
+          <div class="nutella kunafa"> <a href="#"><img class="pic" src="./nutella kunafa.jfif" alt="nutella kunafa"><h1 class="text">nutella kunafa :<br> <span style="color: red; text-shadow: none;" >270rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="butterscotch kunafa"> <a href="#"><img class="pic" src="./butterscotch kunafa.jfif" alt="butterscotch kunafa"><h1 class="text">butterscotch <br> kunafa :<br> <span style="color: red; text-shadow: none;" >270rs <button class="btn">Add</button></span></h1></a>
+          <div class="butterscotch kunafa"> <a href="#"><img class="pic" src="./butterscotch kunafa.jfif" alt="butterscotch kunafa"><h1 class="text">butterscotch <br> kunafa :<br> <span style="color: red; text-shadow: none;" >270rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
     </div>

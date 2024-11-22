@@ -108,27 +108,83 @@
           
             }
             }
+
+            .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.quantity-btn:active{
+    background-color: #bb1616;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #F4EBD0;
+    font-size: 16px;
+    margin: 0 5px;
+}
     </style>
     
     <div class="main">
         <h1 class="head">Wraps </h1>
         <div class="container">
-         <div class="paneer wrap "> <a href="#"><img class="pic" src="images/paneer wrap.jfif" alt=" paneer wrap "><h1 class="text">paneer wrap : <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button></span></h1></a>
+         <div class="paneer wrap "> <a href="#"><img class="pic" src="images/paneer wrap.jfif" alt=" paneer wrap "><h1 class="text">paneer wrap : <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="paneer cheese wrap "> <a href="#"><img class="pic" src="images/paneer cheese wrap.jfif" alt="paneer cheese wrap "><h1 class="text">paneer cheese <br> wrap : <br>  <span style="color: red; text-shadow: none;" >140rs <button class="btn">Add</button></span></h1></a>
+          <div class="paneer cheese wrap "> <a href="#"><img class="pic" src="images/paneer cheese wrap.jfif" alt="paneer cheese wrap "><h1 class="text">paneer cheese <br> wrap : <br>  <span style="color: red; text-shadow: none;" >140rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class=" egg wrap"> <a href="#"><img class="pic" src="images/egg wrap.jfif" alt=" egg wrap"><h1 class="text"> egg wrap :  <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button></span></h1></a>
+          <div class=" egg wrap"> <a href="#"><img class="pic" src="images/egg wrap.jfif" alt=" egg wrap"><h1 class="text"> egg wrap :  <br> <span style="color: red; text-shadow: none;" >100rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="egg cheese wrap"> <a href="#"><img class="pic" src="images/egg cheese wrap.jfif" alt="egg cheese wrap"><h1 class="text">egg cheese <br> wrap : <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button></span></h1></a>
+          <div class="egg cheese wrap"> <a href="#"><img class="pic" src="images/egg cheese wrap.jfif" alt="egg cheese wrap"><h1 class="text">egg cheese <br> wrap : <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="chicken wrap"> <a href="#"><img class="pic" src="images/wrap.jpg" alt="chicken wrap"><h1 class="text">chicken wrap : <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button></span></h1></a>
+          <div class="chicken wrap"> <a href="#"><img class="pic" src="images/wrap.jpg" alt="chicken wrap"><h1 class="text">chicken wrap : <br> <span style="color: red; text-shadow: none;" >120rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
     
-          <div class="chicken cheese wrap"> <a href="#"><img class="pic" src="images/chciken cheese wrap.jfif" alt="chicken cheese wrap"><h1 class="text">chicken cheese<br> wrap : <br>  <span style="color: red; text-shadow: none;" >140rs <button class="btn">Add</button></span></h1></a>
+          <div class="chicken cheese wrap"> <a href="#"><img class="pic" src="images/chciken cheese wrap.jfif" alt="chicken cheese wrap"><h1 class="text">chicken cheese<br> wrap : <br>  <span style="color: red; text-shadow: none;" >140rs <button class="btn">Add</button><div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" max="10">
+            <button class="quantity-btn increment">+</button>
+        </div>
+        </span></h1></a>
           </div>
           
     </div>

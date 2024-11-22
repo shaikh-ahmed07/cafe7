@@ -8,3 +8,27 @@ $(".btn").click(function(event){
         $(this).animate({opacity:1},500);
     }
 })
+ document.querySelectorAll('.quantity').forEach(function(container) {
+        const decrementButton = container.querySelector('.decrement');
+        const incrementButton = container.querySelector('.increment');
+        const inputField = container.querySelector('.quantity-input');
+
+        // Decrement button click
+        decrementButton.addEventListener('click', function(click) {
+            event.preventDefault(click);
+            let currentValue = parseInt(inputField.value) || 1;
+            if (currentValue > parseInt(inputField.min)) {
+                inputField.value = currentValue - 1;
+            }
+        });
+
+        // Increment button click
+        incrementButton.addEventListener('click', function(click) {
+            event.preventDefault(click);
+            let currentValue = parseInt(inputField.value) || 1;
+            if (currentValue < parseInt(inputField.max)) {
+                inputField.value = currentValue + 1;
+            }
+        });
+    });
+
