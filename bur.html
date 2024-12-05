@@ -64,50 +64,55 @@
     /* font-size: 20px; */
 
 }
-            @media(max-width:600px){
-                .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-           
-        
-            }
-            
-                .pic {
-                height: 100px;
-                border: solid 2px;
-                border-radius: 5%;
-                width: 150px;
-                transition: all 0.3s ease-in-out;
-                gap: 50px;
-               
-            }
-            /* .pic:hover {
-                height: 120px;
-                width: 180px;
-            } */
-            .text {
-                text-align: center;
-                margin: 5px 0;
-                padding: 0;
-                text-shadow: 0 0 5px rgb(76, 160, 175);
-            }
-            h1 {
-          
-          text-align: center;
-          font-size: medium;
-        
-      }
-      .head{
-                font-size: 2em;
-                background-color:white;
-                font-style: italic;
-                border: solid  black;
-                margin-bottom: 100px;
-                color: crimson;
-          
-            }
-            }
+@media (max-width: 600px) {
+    /* Container: Adjust the flex settings for mobile view */
+    .container {
+        display: flex;
+        flex-wrap: wrap;        /* Allows items to wrap when they overflow */
+        justify-content: center; /* Center items horizontally */
+        align-items: center;    /* Centers items vertically */
+        padding: 10px;           /* Optional: Adds padding around the container */
+    }
+    
+    /* Picture styles: Ensure they are responsive */
+    .pic {
+        height: 120px;         /* Adjusted height for mobile */
+        width: 100%;           /* Allow width to scale */
+        max-width: 150px;      /* Maximum width for large screens */
+        margin: 10px;          /* Adds spacing between images */
+        border: solid 2px;
+        border-radius: 5%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Text styles: Adjust for mobile readability */
+    .text {
+        text-align: center;
+        margin: 5px 0;
+        padding: 0;
+        text-shadow: 0 0 5px rgb(76, 160, 175);
+    }
+
+    /* Header style: Adjust size and margins for mobile screens */
+    h1 {
+        text-align: center;
+        font-size: 18px;       /* Reduced font size for mobile */
+        margin: 10px 0;        /* Adds margin to space out text */
+    }
+
+    /* Head class styles: Make the heading more mobile-friendly */
+    .head {
+        font-size: 1.5em;      /* Slightly smaller font size for mobile */
+        background-color: white;
+        font-style: italic;
+        border: solid black;
+        margin-bottom: 20px;    /* Reduced bottom margin for mobile */
+        color: crimson;
+        padding: 10px;          /* Adds padding inside the heading */
+        text-align: center;     /* Centers the text */
+    }
+}
+
     
 .quantity {
     display: flex;
