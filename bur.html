@@ -1,170 +1,125 @@
 <style>
-    body{
-        background-image:  url(images/menu\ backg.png);
+    body {
+        background-image: url(images/menu\ backg.png);
         background-size: cover;
         font-family: inherit;
         text-transform: capitalize;
-    
     }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 90px;
-        
-            }
     
-    
-            .pic {
-                height: 150px;
-                border: solid 2px;
-                border-radius: 5%;
-                width: 200px;
-                transition: all 0.3s ease-in-out;
-            }
-    
-            /* .pic:hover {
-                height: 180px;
-                width: 230px;
-            } */
-    
-            .text {
-                /* text-align: center; */
-                margin: 10px 0;
-                padding: 0;
-                text-shadow: 0 0 10px black;
-            }
-    
-            a {
-                text-decoration: none;
-                color: black;
-            }
-    
-            h1 {
-          
-                text-align: center;
-                font-size: x-large;
-                
-              
-            }
-            .head{
-                font-size: 40px;
-                background-color: white;
-                font-style: italic;
-                border: solid 2px;
-                margin-bottom: 100px;
-                
-          
-            }
-.btn{
-    background-color:green;
-    color: white;
-    border-color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* font-size: 20px; */
-
-}
-@media (max-width: 600px) {
-    /* Container: Adjust the flex settings for mobile view */
     .container {
         display: flex;
-        flex-wrap: wrap;        /* Allows items to wrap when they overflow */
-        justify-content: center; /* Center items horizontally */
-        align-items: center;    /* Centers items vertically */
-        padding: 10px;           /* Optional: Adds padding around the container */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px; /* Reduced gap for better spacing on smaller screens */
     }
     
-    /* Picture styles: Ensure they are responsive */
     .pic {
-        height: 120px;         /* Adjusted height for mobile */
-        width: 100%;           /* Allow width to scale */
-        max-width: 150px;      /* Maximum width for large screens */
-        margin: 10px;          /* Adds spacing between images */
+        height: 200px; /* Increased for better visibility on mobile */
+        width: 250px; /* Increased for better visibility on mobile */
         border: solid 2px;
         border-radius: 5%;
         transition: all 0.3s ease-in-out;
     }
-
-    /* Text styles: Adjust for mobile readability */
+    
     .text {
-        text-align: center;
-        margin: 5px 0;
+        margin: 10px 0;
         padding: 0;
-        text-shadow: 0 0 5px rgb(76, 160, 175);
+        text-shadow: 0 0 10px black;
     }
-
-    /* Header style: Adjust size and margins for mobile screens */
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
     h1 {
         text-align: center;
-        font-size: 18px;       /* Reduced font size for mobile */
-        margin: 10px 0;        /* Adds margin to space out text */
+        font-size: large; /* Adjusted font size for readability */
     }
-
-    /* Head class styles: Make the heading more mobile-friendly */
+    
     .head {
-        font-size: 1.5em;      /* Slightly smaller font size for mobile */
+        font-size: 30px; /* Adjusted for mobile */
         background-color: white;
         font-style: italic;
-        border: solid black;
-        margin-bottom: 20px;    /* Reduced bottom margin for mobile */
-        color: crimson;
-        padding: 10px;          /* Adds padding inside the heading */
-        text-align: center;     /* Centers the text */
-        
+        border: solid 2px;
+        margin-bottom: 50px; /* Reduced margin */
     }
-    .quantity1{
-    display: flex;            
-    justify-content: center;   
-    align-items: center;       
-    margin: auto;             
-    width: fit-content;        
-    gap: 10px;                 
-    padding: 10px;           
-}
-
-}
-
     
-.quantity {
-    display: flex;
-    align-items: center;
-}
-
-.quantity-btn {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    background-color: #f5f5f5;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 50%;
-}
-
-.quantity-btn:active{
-    background-color: #bb1616;
-}
-
-.quantity-input {
-    width: 50px;
-    text-align: center;
-    border: 1px solid #F4EBD0;
-    font-size: 16px;
-    margin: 0 5px;
-}
-.quantity1{
-    display: flex;            
-    justify-content: center;   
-    align-items: center;       
-    margin: auto;             
-    width: fit-content;        
-    gap: 10px;                 
-    padding: 10px;           
-}
-
-
-</style>
-
+    .btn {
+        background-color: green;
+        color: white;
+        border-color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16px; /* Adjusted button size */
+    }
+    
+    .quantity1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: fit-content;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .quantity-btn {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 50%;
+    }
+    
+    .quantity-btn:active {
+        background-color: #bb1616;
+    }
+    
+    .quantity-input {
+        width: 50px;
+        text-align: center;
+        border: 1px solid #F4EBD0;
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            gap: 100px; /* Reduced gap for smaller screens */
+        }
+    
+        .pic {
+            height: 250px; /* Increased image size for mobile view */
+            width: 300px; /* Increased width for better visibility */
+        }
+    
+        h1 {
+            font-size: medium; /* Adjusted text size for readability */
+        }
+    
+        .head {
+            font-size: 25px; /* Adjusted heading size for mobile */
+            margin-bottom: 30px; /* Reduced margin */
+        }
+    
+        .btn {
+            font-size: 18px; /* Adjusted button text size for mobile */
+        }
+    
+        .quantity-btn {
+            font-size: 18px; /* Larger buttons for easier interaction */
+        }
+    
+        .quantity-input {
+            width: 60px; /* Increased size for easier input */
+            font-size: 18px; /* Adjusted text size */
+        }
+    }
     </style>
-
+    
     <div class="main">
         <h1 class="head">burgers </h1>
         <div class="container">
