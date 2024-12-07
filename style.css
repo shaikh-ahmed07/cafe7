@@ -11,6 +11,8 @@
 
 .background-img{
     width: 1349px;
+    margin-top: 50px;
+   
 }
 .logo{
     padding:5px;
@@ -55,6 +57,7 @@ margin-right: 250px;
 @media  (min-width:1200px){
     .background-img{
         width: 100%;
+        margin-top: 50px;
     }
     .logo{
         padding: 10px;
@@ -97,6 +100,7 @@ margin-right: 250px;
 @media (max-width:600px){
     .background-img{
         width: 100%;
+        margin-top: 50px;
     }
     .album{
         width: 400px;
@@ -143,6 +147,7 @@ margin-right: 250px;
     .background-img {
         width: 100%;
         height: auto; /* Ensure background image scales properly */
+        margin-top: 50px;
     }
 
     .footer {
@@ -175,7 +180,8 @@ margin-right: 250px;
     }
 
     .background-img {
-        margin: 10px auto; /* Reduce margin for smaller screens */
+       
+        margin-top: 50px;
     }
 
     .footer {
