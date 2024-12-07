@@ -85,38 +85,43 @@
     }
     
     /* Media Query for Mobile Devices */
-    @media (max-width: 768px) {
-        .container {
-            gap: 50px; /* Reduced gap for smaller screens */
-        }
-    
-        .pic {
-            height: 250px; /* Increased image size for mobile view */
-            width: 300px; /* Increased width for better visibility */
-        }
-    
-        h1 {
-            font-size: medium; /* Adjusted text size for readability */
-        }
-    
-        .head {
-            font-size: 25px; /* Adjusted heading size for mobile */
-            margin-bottom: 30px; /* Reduced margin */
-        }
-    
-        .btn {
-            font-size: 18px; /* Adjusted button text size for mobile */
-        }
-    
-        .quantity-btn {
-            font-size: 18px; /* Larger buttons for easier interaction */
-        }
-    
-        .quantity-input {
-            width: 60px; /* Increased size for easier input */
-            font-size: 18px; /* Adjusted text size */
-        }
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 20px; /* Adjust gap for vertical spacing */
     }
+
+    .pic {
+        height: 200px; /* Increased image height for better visibility */
+        width: 250px; /* Make the image take up full width */
+        object-fit: cover; /* Ensure the image scales properly */
+    }
+
+    h1 {
+        font-size: 18px; /* Adjusted text size for readability */
+    }
+
+    .head {
+        font-size: 25px; /* Adjust heading size */
+        margin-bottom: 30px; /* Adjust margin */
+    }
+
+    .btn {
+        font-size: 18px; /* Adjust button text size */
+        width: 100px; /* Ensure consistent button size */
+    }
+
+    .quantity-btn {
+        font-size: 18px; /* Adjust button size */
+    }
+
+    .quantity-input {
+        width: 60px; /* Adjust input size */
+        font-size: 18px; /* Adjust text size */
+    }
+}
+
     </style>
     
     <div class="main">
