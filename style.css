@@ -18,6 +18,30 @@
     padding:5px;
     border-radius: 50%
 }
+.logo:hover{
+    height: 90px;
+}
+.navbar-brand:hover{
+    font-size: x-large;
+    font-weight: bold;
+}
+.nav-link.active:hover{
+    font-size: x-large;
+    font-weight: bold;
+}
+.nav-link:hover{
+    font-size: x-large;
+    font-weight: bold;
+}
+.nav-link.dropdown-toggle{
+    font-size: x-large;
+    font-weight: bold;
+}
+.dropdown-menu:hover{
+    font-size: x-large;
+    font-weight: bold;
+   
+}
 .navbar{
     padding: 0px;position: fixed;
     top: 0;
@@ -54,6 +78,13 @@ gap: 20px;
 margin-right: 250px;
 }
 
+.btn.btn-outline-primary{
+  margin-right: 60px;
+  display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+ 
+}
 @media  (min-width:1200px){
     .background-img{
         width: 100%;
@@ -95,6 +126,12 @@ margin-right: 250px;
     .d-flex{
     margin-right: 250px;
     } 
+    .btn.btn-outline-primary{
+        margin-right: 60px;
+        display: flex;
+        flex-wrap: wrap;
+       
+      }
 }
 
 @media (max-width:600px){
@@ -127,7 +164,17 @@ margin-right: 250px;
     }
     }
     .d-flex{
-        margin-right: 100px;
+        margin-right: 0px;
+}
+.btn.btn-outline-primary{
+    margin-right: 0px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom:10px;
+   
+  }
+.fas.fa-shopping-cart{
+
 }
 }
 
@@ -163,6 +210,10 @@ margin-right: 250px;
     .footer .nav-item {
         margin-bottom: 5px; /* Add spacing between items */
     }
+    .btn.btn-outline-primary{
+        margin-right: 0px;
+       
+      }
 }
 
 /* Mobile View: 576px and below */
@@ -187,4 +238,8 @@ margin-right: 250px;
     .footer {
         font-size: 0.9em; /* Slightly reduce footer text size */
     }
+    .btn.btn-outline-primary{
+        margin-right: 0px;
+       
+      }
 }
