@@ -7,7 +7,7 @@
     }
     
     .container {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 30px; /* Reduced gap for better spacing on smaller screens */
@@ -85,11 +85,9 @@
     }
     
     /* Media Query for Mobile Devices */
-@media (max-width: 768px) {
+@media ( min-width:100px ) and ( max-width: 600px) {
     .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
-        gap: 20px; /* Adjust gap for vertical spacing */
+        background-color: #bb1616;
     }
 
     .pic {
