@@ -11,26 +11,102 @@
    
 </head>
 <body>
-   <%- include("navbar.ejs") %>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img class="logo" height="70px" src="images/logo.webp">
+    <a class="navbar-brand" href="menu.html">Cafe 7</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.html">menu</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">specials</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="coffee.html">coffee</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">contact us</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search Menu Items" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+     <a href="cart.html" style="text-decoration: none; color: #007bff; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border: 2px solid #007bff; border-radius: 8px; transition: all 0.3s;">
+  <i class="fas fa-shopping-cart"></i> Cart
+  <span class="cart-count" style="background: #e74c3c; color: white; border-radius: 50%; padding: 2px 8px; font-size: 12px; font-weight: bold; min-width: 20px; text-align: center;">0</span>
+</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Active link highlighting script -->
+<script>
+  // Highlight the active navbar link
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = location.pathname.split("/").pop();
+    document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item').forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active-page');
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Active page style */
+  .active-page {
+    color: #b56b33 !important; /* Coffee-brown/orange */
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .cart-count {
+    background: #b56b33;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    margin-left: 5px;
+    font-size: 0.8em;
+  }
+</style>
+
       <div class="img">
         <img class="background-img" src="images/back.png" alt="cafe7 background-img">
       </div>
     <section>
-      <footer>
-      <div class="footer">
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link px-2 text-body-secondary">menu</a></li>
-            <li class="nav-item"><a href="combos.html" class="nav-link px-2 text-body-secondary">combos</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">contact us</a></li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2024 cafe 7</p>
-        </footer>
-      </div>
-    </footer>
+     <footer class="py-4 bg-light border-top">
+  <div class="container text-center">
+    <ul class="nav justify-content-center mb-3">
+      <li class="nav-item">
+        <a href="#" class="nav-link px-3 text-muted footer-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="menu.html" class="nav-link px-3 text-muted footer-link">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link px-3 text-muted footer-link">Contact Us</a>
+      </li>
+    </ul>
+    <p class="text-muted mb-0">© 2024 Cafe 7</p>
+  </div>
+</footer>
+
 </section>
 </div>
 <script src="main.js"></script>
+<script src="universal_cart.js"></script>
+</script>
 </body>
 </html>

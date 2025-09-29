@@ -1,26 +1,488 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cart</title>
-</head>
-<style>
-  body{
-    background-color: aliceblue;
-     } 
-  .heading{
-    background-color: rgb(162, 122, 199);
-    text-align: center;
-    font-size: xx-large;
+  <title>Shopping Cart - Cafe 7</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  }
-  .heading:hover{
-    background-color:palevioletred;
-  }
-</style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      color: #2c3e50;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .cart-icon {
+      font-size: 36px;
+    }
+
+    .back-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Cart Container */
+    .cart-container {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      min-height: 400px;
+    }
+
+    /* Empty Cart */
+    .empty-cart {
+      text-align: center;
+      padding: 80px 20px;
+      color: #7f8c8d;
+    }
+
+    .empty-cart-icon {
+      font-size: 100px;
+      margin-bottom: 20px;
+      opacity: 0.5;
+    }
+
+    .empty-cart h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    .empty-cart p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .shop-now-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .shop-now-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Cart Items */
+    .cart-items {
+      margin-bottom: 30px;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 100px 1fr auto auto auto;
+      gap: 20px;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid #ecf0f1;
+      transition: background 0.3s;
+    }
+
+    .cart-item:hover {
+      background: #f8f9fa;
+    }
+
+    .item-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+    .item-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .item-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .item-price {
+      font-size: 18px;
+      color: #7f8c8d;
+      font-weight: 500;
+    }
+
+    /* Quantity Controls */
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f8f9fa;
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+
+    .qty-controls button {
+      background: white;
+      border: 2px solid #667eea;
+      color: #667eea;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-controls button:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    .qty-controls input {
+      width: 60px;
+      text-align: center;
+      border: 2px solid #ecf0f1;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .item-subtotal {
+      font-size: 22px;
+      font-weight: 700;
+      color: #27ae60;
+      min-width: 100px;
+      text-align: right;
+    }
+
+    .remove-btn {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .remove-btn:hover {
+      background: #c0392b;
+      transform: scale(1.05);
+    }
+
+    /* Summary */
+    .cart-summary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 30px;
+      border-radius: 15px;
+      color: white;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .summary-row.total {
+      border-top: 2px solid rgba(255,255,255,0.3);
+      padding-top: 20px;
+      margin-top: 20px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      background: white;
+      color: #667eea;
+      padding: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+
+    .checkout-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .clear-cart-btn {
+      width: 100%;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 14px;
+      border: 2px solid white;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 15px;
+      transition: all 0.3s;
+    }
+
+    .clear-cart-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cart-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .item-image {
+        margin: 0 auto;
+      }
+
+      .qty-controls {
+        justify-content: center;
+      }
+
+      .item-subtotal {
+        text-align: center;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
 <body>
- <i> <h1 class="heading"> Your Cart  Items </h1></i>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1><span class="cart-icon">🛒</span> Your Cart</h1>
+      <a href="index.html" class="back-btn">
+        ← Continue Shopping
+      </a>
+    </div>
+
+    <!-- Cart Container -->
+    <div class="cart-container">
+      <div id="cart-root"></div>
+    </div>
+  </div>
+
+  <script>
+    // Render cart page UI
+    function renderCart(){
+      const root = document.getElementById('cart-root');
+      const cart = window.__CafeCart.getCart();
+      
+      if(!cart || cart.length === 0){
+        root.innerHTML = `
+          <div class="empty-cart">
+            <div class="empty-cart-icon">🛒</div>
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven't added anything to your cart yet.</p>
+            <a href="index.html" class="shop-now-btn">Start Shopping</a>
+          </div>
+        `;
+        return;
+      }
+
+      let itemsHtml = '<div class="cart-items">';
+      let total = 0;
+      let totalItems = 0;
+
+      cart.forEach(item => {
+        const subtotal = (item.price * item.qty);
+        total += subtotal;
+        totalItems += item.qty;
+        
+        // Generate emoji based on item name
+        const emoji = getItemEmoji(item.name);
+        
+        itemsHtml += `
+          <div class="cart-item" data-id="${item.id}">
+            <div class="item-image">${emoji}</div>
+            <div class="item-details">
+              <div class="item-name">${item.name}</div>
+              <div class="item-price">₹${item.price.toFixed(2)} each</div>
+            </div>
+            <div class="qty-controls">
+              <button class="decrement">−</button>
+              <input class="quantity-input" type="number" min="1" value="${item.qty}" />
+              <button class="increment">+</button>
+            </div>
+            <div class="item-subtotal">₹${subtotal.toFixed(2)}</div>
+            <button class="remove-btn">Remove</button>
+          </div>
+        `;
+      });
+
+      itemsHtml += '</div>';
+
+      // Summary section
+      const summaryHtml = `
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal (${totalItems} items)</span>
+            <span>₹${total.toFixed(2)}</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery</span>
+            <span>FREE</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>₹${total.toFixed(2)}</span>
+          </div>
+          <button class="checkout-btn">Proceed to Checkout</button>
+          <button class="clear-cart-btn">Clear Cart</button>
+        </div>
+      `;
+
+      root.innerHTML = itemsHtml + summaryHtml;
+    }
+
+    // Get emoji based on item name
+    function getItemEmoji(name) {
+      const nameLower = name.toLowerCase();
+      if(nameLower.includes('coffee') || nameLower.includes('espresso')) return '☕';
+      if(nameLower.includes('tea')) return '🍵';
+      if(nameLower.includes('cake') || nameLower.includes('pastry')) return '🍰';
+      if(nameLower.includes('sandwich')) return '🥪';
+      if(nameLower.includes('burger')) return '🍔';
+      if(nameLower.includes('pizza')) return '🍕';
+      if(nameLower.includes('salad')) return '🥗';
+      if(nameLower.includes('juice')) return '🧃';
+      if(nameLower.includes('smoothie')) return '🥤';
+      if(nameLower.includes('ice cream') || nameLower.includes('icecream')) return '🍨';
+      if(nameLower.includes('cookie')) return '🍪';
+      if(nameLower.includes('donut') || nameLower.includes('doughnut')) return '🍩';
+      return '🍽️';
+    }
+
+    // Handle events
+    document.addEventListener('click', function(e){
+      const t = e.target;
+      
+      if(t.classList.contains('remove-btn')){
+        const item = t.closest('.cart-item');
+        const id = item.getAttribute('data-id');
+        if(confirm('Remove this item from cart?')){
+          window.__CafeCart.removeFromCart(id);
+          renderCart();
+        }
+      } 
+      else if(t.classList.contains('checkout-btn')){
+        alert('Checkout functionality coming soon! 🎉');
+      }
+      else if(t.classList.contains('clear-cart-btn')){
+        if(confirm('Are you sure you want to clear your entire cart?')){
+          window.__CafeCart.saveCart([]);
+          window.dispatchEvent(new CustomEvent('cartUpdated', {detail: {cart: []}}));
+          renderCart();
+        }
+      }
+    });
+
+    // Handle quantity input changes
+    document.addEventListener('input', function(e){
+      const t = e.target;
+      if(t.matches('input.quantity-input')){
+        const item = t.closest('.cart-item');
+        const id = item.getAttribute('data-id');
+        let qty = parseInt(t.value) || 1;
+        if(qty < 1) qty = 1;
+        window.__CafeCart.updateCartQty(id, qty);
+        renderCart();
+      }
+    });
+
+    // Handle increment/decrement
+    document.addEventListener('click', function(e){
+      if(e.target.matches('.increment') || e.target.matches('.decrement')){
+        setTimeout(() => {
+          const item = e.target.closest('.cart-item');
+          if(!item) return;
+          const id = item.getAttribute('data-id');
+          const input = item.querySelector('input.quantity-input');
+          const qty = parseInt(input.value) || 1;
+          window.__CafeCart.updateCartQty(id, qty);
+          renderCart();
+        }, 50);
+      }
+    });
+
+    window.addEventListener('cartUpdated', renderCart);
+    document.addEventListener('DOMContentLoaded', renderCart);
+  </script>
+  <script src="universal_cart.js"></script>
 </body>
 </html>

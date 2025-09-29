@@ -3,25 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wraps Menu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Desserts & Sweets</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: linear-gradient(135deg, #F5F5DC 0%, #E8DCC4 50%, #D2B48C 100%);
-            font-family: 'Georgia', serif;
-            min-height: 100vh;
-            padding: 0;
-             padding-top: 100px;
-        }
-
-      .navbar {
+        .navbar {
     background: rgba(255, 255, 255, 0.95) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
@@ -144,11 +130,23 @@ body {
         min-width: 150px;
     }
 }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #F5F5DC 0%, #E8DCC4 50%, #D2B48C 100%);
+            font-family: 'Georgia', serif;
+            min-height: 100vh;
+            padding: 20px;
+            padding-top: 100px;
+        }
 
         .main {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
         }
 
         .head {
@@ -157,8 +155,8 @@ body {
             color: #3E2723;
             margin: 40px 0 60px 0;
             font-weight: 300;
-            letter-spacing: 8px;
-            text-transform: uppercase;
+            letter-spacing: 6px;
+            text-transform: capitalize;
             background: linear-gradient(to bottom, #FFFFFF 0%, #F5E6D3 100%);
             padding: 30px;
             border-radius: 15px;
@@ -173,7 +171,7 @@ body {
             padding: 20px;
         }
 
-        .wrap-item {
+        .dessert-item {
             background: linear-gradient(to bottom, #FFFFFF 0%, #FAF0E6 100%);
             border-radius: 20px;
             padding: 30px;
@@ -183,7 +181,7 @@ body {
             text-align: center;
         }
 
-        .wrap-item:hover {
+        .dessert-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(101, 67, 33, 0.3);
             border-color: #8B4513;
@@ -199,7 +197,7 @@ body {
             transition: all 0.3s ease;
         }
 
-        .wrap-item:hover .pic {
+        .dessert-item:hover .pic {
             border-color: #8B4513;
         }
 
@@ -219,22 +217,21 @@ body {
             gap: 15px;
             margin-top: 20px;
         }
+.price {
+    color: #e53935; /* Slightly brighter, modern red */
+    font-size: 24px; /* Slightly smaller, more balanced */
+    font-weight: 600; /* Semi-bold for elegance */
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; /* Clean, professional font */
+    letter-spacing: 0.5px; /* Slight spacing for readability */
+    display: inline-block;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
 
-        .price {
-            color: #e53935;
-            font-size: 24px;
-            font-weight: 600;
-            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-            letter-spacing: 0.5px;
-            display: inline-block;
-            transition: color 0.3s ease;
-        }
+.price:hover {
+    color: #b71c1c; /* Darker red on hover for subtle effect */
+}
 
-        .price:hover {
-            color: #b71c1c;
-        }
-
-        .btn {
+     .btn {
             background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
             color: white;
             border: none;
@@ -321,7 +318,7 @@ body {
             .head {
                 font-size: 36px;
                 padding: 20px;
-                letter-spacing: 4px;
+                letter-spacing: 3px;
                 margin: 20px 0 40px 0;
             }
 
@@ -365,8 +362,7 @@ body {
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <img class="logo" height="70px" src="images/logo.webp" alt="Cafe 7 Logo">
             <a class="navbar-brand" href="menu.html">Cafe 7</a>
@@ -405,16 +401,30 @@ body {
             </div>
         </div>
     </nav>
-
-    <!-- Main Content -->
     <div class="main">
-        <h1 class="head">Wraps</h1>
+        <h1 class="head">Desserts and Sweets</h1>
         
-        <div class="container">   
-            <div class="wrap-item">
+        <div class="container">
+            <div class="dessert-item">
                 <a href="#">
-                    <img class="pic" src="images/shawarma.jfif" alt="chicken shawarma">
-                    <h1 class="text">chicken shawarma</h1>
+                    <img class="pic" src="desert-img/Shehdood cream.jpg" alt="Shehdood cream">
+                    <h1 class="text">Shehdood Cream</h1>
+                    <div class="price-section">
+                        <span class="price">₹120</span>
+                        <button class="btn">Add to Cart</button>
+                        <div class="quantity">
+                            <button class="quantity-btn decrement">−</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="10">
+                            <button class="quantity-btn increment">+</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dessert-item">
+                <a href="#">
+                    <img class="pic" src="desert-img/sitafal cream.jpg" alt="sitafal cream">
+                    <h1 class="text">Sitafal Cream</h1>
                     <div class="price-section">
                         <span class="price">₹100</span>
                         <button class="btn">Add to Cart</button>
@@ -427,12 +437,12 @@ body {
                 </a>
             </div>
 
-            <div class="wrap-item">
+            <div class="dessert-item">
                 <a href="#">
-                    <img class="pic" src="images/special shawarma.jfif" alt="special shwarma">
-                    <h1 class="text">special shwarma</h1>
+                    <img class="pic" src="desert-img/mango cream.jpg" alt="mango cream">
+                    <h1 class="text">Mango Cream</h1>
                     <div class="price-section">
-                        <span class="price">₹140</span>
+                        <span class="price">₹100</span>
                         <button class="btn">Add to Cart</button>
                         <div class="quantity">
                             <button class="quantity-btn decrement">−</button>
@@ -443,12 +453,12 @@ body {
                 </a>
             </div>
 
-            <div class="wrap-item">
+            <div class="dessert-item">
                 <a href="#">
-                    <img class="pic" src="images/chicken  cheese shawarma.jfif" alt="specail spicy cheese shwarma">
-                    <h1 class="text">specail spicy cheese shwarma</h1>
+                    <img class="pic" src="desert-img/khajoor cream.jpg" alt="khajoor cream">
+                    <h1 class="text">Khajoor Cream</h1>
                     <div class="price-section">
-                        <span class="price">₹150</span>
+                        <span class="price">₹120</span>
                         <button class="btn">Add to Cart</button>
                         <div class="quantity">
                             <button class="quantity-btn decrement">−</button>
@@ -459,12 +469,60 @@ body {
                 </a>
             </div>
 
-            <div class="wrap-item">
+            <div class="dessert-item">
                 <a href="#">
-                    <img class="pic" src="images/dry fruits shawarma.jfif" alt="Dry friut shawarma">
-                    <h1 class="text">Dry friut shawarma</h1>
+                    <img class="pic" src="desert-img/cream kunafa.jpg" alt="cream kunafa">
+                    <h1 class="text">Cream Kunafa</h1>
                     <div class="price-section">
-                        <span class="price">₹150</span>
+                        <span class="price">₹250</span>
+                        <button class="btn">Add to Cart</button>
+                        <div class="quantity">
+                            <button class="quantity-btn decrement">−</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="10">
+                            <button class="quantity-btn increment">+</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dessert-item">
+                <a href="#">
+                    <img class="pic" src="desert-img/cream cheese kunafa.webp" alt="cream cheese kunafa">
+                    <h1 class="text">Cream Cheese Kunafa</h1>
+                    <div class="price-section">
+                        <span class="price">₹260</span>
+                        <button class="btn">Add to Cart</button>
+                        <div class="quantity">
+                            <button class="quantity-btn decrement">−</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="10">
+                            <button class="quantity-btn increment">+</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dessert-item">
+                <a href="#">
+                    <img class="pic" src="desert-img/nutella kunafa.jfif" alt="nutella kunafa">
+                    <h1 class="text">Nutella Kunafa</h1>
+                    <div class="price-section">
+                        <span class="price">₹270</span>
+                        <button class="btn">Add to Cart</button>
+                        <div class="quantity">
+                            <button class="quantity-btn decrement">−</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="10">
+                            <button class="quantity-btn increment">+</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="dessert-item">
+                <a href="#">
+                    <img class="pic" src="desert-img/butterscotch kunafa.jfif" alt="butterscotch kunafa">
+                    <h1 class="text">Butterscotch Kunafa</h1>
+                    <div class="price-section">
+                        <span class="price">₹270</span>
                         <button class="btn">Add to Cart</button>
                         <div class="quantity">
                             <button class="quantity-btn decrement">−</button>
@@ -476,20 +534,8 @@ body {
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        // Highlight the active navbar link
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = location.pathname.split("/").pop();
-            document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active-page');
-                }
-            });
-        });
-    </script>
     <script src="universal_cart.js"></script>
      <script src="main.js"></script>
 </body>
