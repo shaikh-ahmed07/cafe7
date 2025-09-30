@@ -1,9 +1,8 @@
-
 const menuItems = {
   burgers:"bur.html",
   burger:"bur.html",
   "veg pizza":"piz.html",
- "chicken pizza":"piz.html",
+  "chicken pizza":"piz.html",
   pizza:"piz.html",
   wraps:"wra.html",
   wrap:"wra.html",
@@ -18,12 +17,16 @@ const menuItems = {
   refreshment:"shakes.html",
   coffee:"coffee.html"
 };
-document.querySelector(".btn.btn-outline-success").addEventListener("click",function(e){
+
+document.querySelector(".search-btn").addEventListener("click", function(e){
   e.preventDefault();
-var searchItem= document.querySelector(".form-control.me-2").value.trim().toLowerCase();
-if(menuItems[searchItem]){
-  window.location.href = menuItems[searchItem];
-}else{
-  alert("item not found");
-}
-})
+  e.stopPropagation(); // Add this line
+  e.stopImmediatePropagation(); // Add this line too
+  
+  var searchItem = document.querySelector(".form-control.me-2").value.trim().toLowerCase();
+  if(menuItems[searchItem]){
+    window.location.href = menuItems[searchItem];
+  } else {
+    alert("Item not found");
+  }
+}, true); // Add true here for capture phase
